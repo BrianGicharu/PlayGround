@@ -11,7 +11,7 @@ public class MyMap {
 	String pairs;
 
 	public MyMap(Integer size) {
-		
+
 		entry = new ArrayList<>(size);
 		this.mSize = size;
 		for (int i = 0; i < size; i++) {
@@ -63,19 +63,19 @@ public class MyMap {
 		return key;
 	}
 
-	public String getPair(Object k) throws Throwable{
-		return String.format("{\n\t%s : %s\n}", k,this.getValue(k));
+	public String getPair(Object k) throws Throwable {
+		return String.format("{\n\t%s : %s\n}", k, this.getValue(k));
 	}
-	
+
 	public String getAllPairs() {
 		pairs = "{";
-		entry.forEach(e->{
-			pairs+=String.format("\n\t%s : %s\n", ((Pair) e).A, ((Pair) e).B);
+		entry.forEach(e -> {
+			pairs += String.format("\n\t%s : %s\n", (String) ((Pair) e).A, (String) ((Pair) e).B);
 		});
-		pairs+="}";
+		pairs += "}";
 		return pairs;
 	}
-	
+
 	public void pop(Object k) {
 		entry.remove(entry.indexOf(k));
 	}
