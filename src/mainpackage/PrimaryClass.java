@@ -1,17 +1,22 @@
 package mainpackage;
 
-public class PrimaryCalss {
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class PrimaryClass {
 
 	public static void main(String[] args) throws Throwable {
 //		messWithClassScopes();
 
 		MyMap hashMap = new MyMap();
-
+		
 		hashMap.addItem("Name", "Yobra");
 		hashMap.addItem("movie_star", "Trejo");
 		hashMap.addItem("Piper");
 		hashMap.addItem("player", 34);
 		hashMap.addItem("noValueUszed");
+		
+		hashMap.addItem(new String(new char[] {(char)104, (char)105, (char)103}), "charCast_like_in_C");
 
 		System.out.println("\nRecord with name : " + hashMap.getValue("Name"));
 		System.out.println("\nObject Size: " + hashMap.getSize());

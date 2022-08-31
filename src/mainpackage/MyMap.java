@@ -70,7 +70,7 @@ public class MyMap {
 	public String getAllPairs() {
 		pairs = "{";
 		entry.forEach(e -> {
-			pairs += String.format("\n\t%s : %s\n", (String) ((Pair) e).A, (String) ((Pair) e).B);
+			pairs += String.format("\n\t%s : %s\n", ((Pair) e).A, ((Pair) e).B);
 		});
 		pairs += "}";
 		return pairs;
